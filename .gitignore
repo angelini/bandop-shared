@@ -1,0 +1,9 @@
+/bin
+/target
+.project
+.settings
+.classpath
+dump.rdb
+.sass-cache
+.idea/
+*.iml
