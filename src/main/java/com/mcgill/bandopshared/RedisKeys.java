@@ -10,6 +10,8 @@ public class RedisKeys {
     static final String PENDING_KEY = "pendingRewards";
     static final String COUNT_KEY = "count";
 
+    public static final String ALGO_TYPE = "algo_type";
+
     public static String experiments() {
         return EXPERIMENTS_KEY;
     }
