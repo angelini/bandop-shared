@@ -9,8 +9,7 @@ public class RedisKeys {
     static final String DESIGNS_KEY = "designs";
     static final String PENDING_KEY = "pendingRewards";
     static final String COUNT_KEY = "count";
-
-    public static final String ALGO_TYPE = "algo_type";
+    static final String ALGO_TYPE = "algoType";
 
     public static String experiments() {
         return EXPERIMENTS_KEY;
@@ -38,6 +37,14 @@ public class RedisKeys {
 
     public static String count(String experimentId) {
         return buildKey(new String[] {EXPERIMENTS_KEY, experimentId, COUNT_KEY});
+    }
+
+    public static String algorithmType(int experimentId) {
+        return algorithmType(Integer.toString(experimentId));
+    }
+
+    public static String algorithmType(String experimentId) {
+        return buildKey(new String[] {EXPERIMENTS_KEY, experimentId, ALGO_TYPE});
     }
 
     public static String design(int designId) {
